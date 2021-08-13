@@ -344,4 +344,28 @@
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers">524288,1048576,2097152,262144,524288,1048576</string>
+
+    <!-- The list of components which should be automatically disabled for a specific package. --> 
+    <string-array name="config_disabledComponents" translatable="false">
+	<item>com.google.android.googlequicksearchbox/com.google.android.hotword.service.HotwordService</item>
+    </string-array>
+
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- Does the device support battery LED? -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+
+    <!-- Does the battery LED support multiple colors?
+         Used to decide if the user can change the colors -->
+    <bool name="config_multiColorBatteryLed">true</bool>
+
+    <!-- Smart charge sysfs node and value for suspend/resume charging-->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
+    <string name="config_SmartChargingSuspendValue" translatable="false">0</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">1</string>
+
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">false</bool>
+
 </resources>
